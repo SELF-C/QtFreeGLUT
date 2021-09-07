@@ -38,7 +38,9 @@ win32:CONFIG(release, debug|release): LIBS += -L$PWD/lib/ -lfreeglut
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/lib/ -lfreeglutd
 else:unix:!macx: LIBS += -L$$PWD/lib/ -lfreeglutd
 
-INCLUDEPATH += \
-    $$PWD/include \
+LIBS += -lOpenGL32
+
+INCLUDEPATH += $$PWD/include
 
 DEPENDPATH += $$PWD/lib
+
